@@ -1,0 +1,1587 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+/* 
+    1. common css
+    2.heading css
+    3.navbar css
+    4.banner css
+    5. about css
+    6. gallary css
+*/
+
+
+/* =======================
+   table of content
+=========================*/
+
+:root {
+    --hf: 'Oswald', sans-serif;
+    --pf: 'Open Sans', sans-serif;
+    --cl1: #e23e38;
+    --cl2: #353535;
+    --clp: #777777;
+    --clu: #555555;
+    --bg1: #f1f1f1;
+    --bg2: #dddd;
+    --overred: rgba(226, 62, 56, 0.5);
+    --over8: rgba(0, 0, 0, 0.8);
+    --over6: rgba(0, 0, 0, 0.6);
+    --over9: rgba(0, 0, 0, 0.9);
+    --overfooter: rgba(0, 0, 0, 0.85);
+}
+
+
+/* =======================
+    common css end here
+=========================*/
+
+
+/* =======================
+    heading css start here
+=========================*/
+
+.heading h3 {
+    font-family: var(--hf);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--cl2);
+    text-transform: uppercase;
+}
+
+.heading img {
+    margin-top: -15px;
+}
+
+
+/* =======================
+    heading css ends here
+=========================*/
+
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overred);
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all linear 0.4s;
+}
+
+
+/* =======================
+   navbar start 
+=========================*/
+
+.navbar {
+    background: rgba(53, 53, 53, 0.80);
+    position: fixed;
+    top: 30px;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+}
+
+.navbar .navbar-brand {
+    background: var(--cl2);
+    padding: 10px 16px;
+    transform: skewX(-35deg);
+    position: absolute;
+}
+
+.navbar .navbar-brand img {
+    transform: skewX(35deg);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffff;
+    font-size: 14px;
+    font-family: var(--hf);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 50px;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+    transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+}
+
+.navbar-light .navbar-nav .nav-item:hover .nav-link {
+    color: var(--cl2);
+}
+
+.navbar-light .navbar-nav .nav-link::before {
+    content: "";
+    width: 100%;
+    height: 0%;
+    background: #ffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+}
+
+.navbar-light .navbar-nav .nav-item:hover .nav-link::before {
+    height: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link.active::before {
+    height: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link::after {
+    content: "";
+    width: 100%;
+    height: 0;
+    background: var(--cl1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+}
+
+.navbar-light .navbar-nav .nav-item:hover .nav-link::after {
+    height: 3px;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link.active::after {
+    height: 3px;
+}
+
+
+/* =======================
+   navbar ends here
+=========================*/
+
+
+/* =======================
+  banner starts here
+=========================*/
+
+.slider-item {
+    padding-top: 255px;
+    padding-bottom: 115px;
+    position: relative;
+    z-index: 1;
+}
+
+.slider-item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--over6);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+#banner .bg1 {
+    background: url("../images/gymnasium2.jpg") no-repeat center / cover;
+}
+
+#banner .bg2 {
+    background: url("../images/gymnasium.jpg") no-repeat center / cover;
+}
+
+#banner .bg3 {
+    background: url("../images/gymnasium3.jpg") no-repeat center / cover;
+}
+
+#banner .slider-item .banner-text h2 {
+    font-family: var(--hf);
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+#banner .slider-item .banner-text h1 {
+    font-family: var(--hf);
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 60px;
+    color: var(--cl1);
+    margin-bottom: 16px;
+}
+
+#banner .slider-item .banner-text p {
+    font-family: var(--pf);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+#banner .slider-item .banner-text a {
+    border-radius: 0;
+    margin-right: 30px;
+    padding: 0 14px;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-family: var(--hf);
+    font-weight: 500;
+    margin-top: 12px;
+    transition: all linear 0.4s;
+}
+
+#banner .slider-item .banner-text a:last-of-type {
+    margin-right: 0;
+}
+
+#banner .slider-item .banner-text a:hover {
+    border-color: var(--cl1);
+    background: var(--cl1);
+    color: #ffff;
+}
+
+#banner .bg1 .banner-text {
+    position: relative;
+}
+
+#banner .bg1 .banner-text::before {
+    content: "";
+    width: 3px;
+    height: 196px;
+    background: var(--cl1);
+    position: absolute;
+    top: 14px;
+    left: 0;
+}
+
+#banner .bg1 .banner-text::after {
+    content: "";
+    width: 3px;
+    height: 196px;
+    background: var(--cl1);
+    position: absolute;
+    top: 14px;
+    right: 0;
+}
+
+#banner .bg1 .banner-text h2 {
+    position: relative;
+}
+
+#banner .bg1 .banner-text h2::before {
+    content: "";
+    width: 197px;
+    height: 3px;
+    background: var(--cl1);
+    position: absolute;
+    top: 13px;
+    left: 0;
+}
+
+#banner .bg1 .banner-text h2::after {
+    content: "";
+    width: 150px;
+    height: 3px;
+    background: var(--cl1);
+    position: absolute;
+    top: 11px;
+    right: 0;
+}
+
+#banner .bg1 .banner-text h1::before {
+    content: "";
+    width: 112px;
+    height: 3px;
+    background: var(--cl1);
+    position: absolute;
+    top: 210px;
+    left: 0;
+}
+
+#banner .bg1 .banner-text h1::after {
+    content: "";
+    width: 85px;
+    height: 3px;
+    background: var(--cl1);
+    position: absolute;
+    top: 210px;
+    right: 0;
+}
+
+#banner .bg1 .banner-text p {
+    padding: 0 23px;
+}
+
+#banner .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+    z-index: 22222;
+}
+
+#banner .slick-dots li {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#banner .slick-dots li.slick-active {
+    border-color: var(--cl1);
+    background: var(--cl1);
+    transform: scale(1.2);
+}
+
+#banner .slick-dots li button {
+    font-size: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+/* =======================
+   banner ends here
+=========================*/
+
+
+/* .navbar-light .navbar-nav .nav-link::after {
+    background: #008000;
+} */
+
+
+/* =======================
+   about starts here
+=========================*/
+
+#about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#about .about-vedio {
+    position: relative;
+}
+
+#about .about-vedio .about-overlay {
+    width: 100%;
+    height: 100%;
+    background: var(--over6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#about .about-vedio .about-overlay .about-icon i {
+    width: 48px;
+    height: 48px;
+    background: var(--cl1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 48px;
+    font-size: 24px;
+    color: var(--cl2);
+}
+
+#about .about-vedio .about-overlay .about-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#about .about-details p {
+    font-family: var(--pf);
+    font-size: 14.5px;
+    font-weight: 400;
+    color: var(--clp);
+    line-height: 24px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+#about .about-details p:last-of-type {
+    margin-top: 10px;
+}
+
+
+/* =======================
+   about ends here
+=========================*/
+
+
+/* =======================
+   gallary starts here
+=========================*/
+
+#gallary .gallary-bg {
+    background: url(../images/portfolio-bg.jpg) no-repeat center / cover;
+    padding-top: 30px;
+    position: relative;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+#gallary .gallary-bg::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--over8);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+#gallary .gallary-bg .gallary-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#gallary .gallary-bg .gallary-item:hover .item-overlay {
+    opacity: 1;
+}
+
+#gallary .gallary-bg .gallary-item .item-overlay .gl-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#gallary .gallary-bg .gallary-item .item-overlay .gl-icon i {
+    color: #fff;
+    font-size: 24px;
+}
+
+
+/* =======================
+   gallary  ends here
+=========================*/
+
+
+/* =======================
+   team  starts here
+=========================*/
+
+#team {
+    padding-top: 75px;
+    padding-bottom: 80px;
+}
+
+#team .team-content .team-member {
+    margin-right: 30px;
+    padding-top: 70px;
+    transition: all linear 0.4s;
+}
+
+#team .team-content .team-member:hover {
+    transform: translateY(-40px);
+}
+
+#team .team-content .team-member .card {
+    border-color: transparent !important;
+    border-radius: 0 !important;
+    transition: all linear 0.4s;
+}
+
+#team .team-content .team-member:hover .card {
+    border-color: var(--bg2) !important;
+}
+
+#team .team-content .team-member .card .card-img .card-img-top {
+    border-radius: 0 !important;
+}
+
+#team .team-content .team-member .card-img {
+    position: relative;
+}
+
+#team .team-content .team-member:hover .card-img .item-overlay {
+    opacity: 1;
+}
+
+#team .team-content .team-member .card-img .item-overlay ul {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+#team .team-content .team-member .card-img .item-overlay ul li {
+    margin-bottom: 10px;
+}
+
+#team .team-content .team-member .card-img .item-overlay ul li:last-child {
+    margin-bottom: 0;
+}
+
+#team .team-content .team-member .card-img .item-overlay i {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ffff;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    transition: all linear 0.4s;
+}
+
+#team .team-content .team-member .card-img .item-overlay ul li:hover i {
+    color: #1d9dee;
+    background: #fff;
+}
+
+#team .team-content .team-member .card-title {
+    font-family: var(--hf);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--cl2);
+}
+
+#team .team-content .team-member h6 {
+    font-family: var(--hf);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--clu);
+}
+
+#team .team-content .team-member .card-text {
+    font-family: var(--pf);
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--clp);
+    visibility: hidden;
+    transition: all linear 0.4s;
+    opacity: 0;
+}
+
+#team .team-content .team-member:hover .card-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* =======================
+   team  ends here
+=========================*/
+
+
+/* =======================
+   feedback starts here
+=========================*/
+
+#feedback {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: url(../images/portfolio-bg.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+}
+
+#feedback::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--over8);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+#feedback .feedback-item {
+    margin-right: 30px;
+}
+
+#feedback .feedback-item .feedback-title h5 {
+    font-family: var(--hf);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#feedback .feedback-item .feedback-title h6 {
+    font-family: var(--hf);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+#feedback .feedback-item .feedback-title ul {
+    padding: 0;
+}
+
+#feedback .feedback-item .feedback-title ul li {
+    color: var(--cl1);
+    display: inline-block;
+}
+
+#feedback .feedback-item .feedback-text p {
+    font-family: var(--pf);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    padding-bottom: 30px;
+    padding-right: 12px;
+}
+
+#feedback .slick-dots {
+    position: absolute;
+    left: 47%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    display: flex;
+    margin-bottom: 0px;
+}
+
+#feedback .slick-dots li {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#feedback .slick-dots li.slick-active {
+    border-color: var(--cl1);
+    background: var(--cl1);
+    transform: scale(1.2);
+}
+
+#feedback .slick-dots li button {
+    font-size: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+/* =======================
+   feedback  ends here
+=========================*/
+
+
+/* =======================
+   membership starts here
+=========================*/
+
+#membership {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#membership .heading {
+    padding-bottom: 15px;
+}
+
+#membership .pricing .price-head h3 {
+    font-family: var(--hf);
+    font-size: 16px;
+    line-height: 55px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: var(--bg2);
+    color: var(--cl2);
+    margin-bottom: 0;
+    transition: all linear 0.4s;
+}
+
+#membership .pricing:hover .price-head h3 {
+    background: var(--cl1);
+    color: #fff;
+}
+
+#membership .pricing .monthly-price1 {
+    background: url(../images/plan1.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+}
+
+#membership .pricing .monthly-price1::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--over8);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+#membership .pricing .monthly-price1 {
+    padding-top: 41px;
+    padding-bottom: 39px;
+}
+
+#membership .pricing .monthly-price1 h4 span {
+    font-family: var(--hf);
+    font-weight: 500;
+    color: #fff;
+    font-size: 50px;
+}
+
+#membership .pricing .monthly-price1 h4 {
+    font-family: var(--hf);
+    font-weight: 500;
+    color: #ffff;
+    font-size: 29px;
+    text-transform: capitalize;
+}
+
+#membership .pricing .monthly-price2 {
+    background: url(../images/plan2.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+}
+
+#membership .pricing .monthly-price2::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--over8);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+#membership .pricing .monthly-price2 {
+    padding-top: 41px;
+    padding-bottom: 39px;
+}
+
+#membership .pricing .monthly-price2 h4 span {
+    font-family: var(--hf);
+    font-weight: 500;
+    color: #fff;
+    font-size: 50px;
+}
+
+#membership .pricing .monthly-price2 h4 {
+    font-family: var(--hf);
+    font-weight: 500;
+    color: #ffff;
+    font-size: 29px;
+    text-transform: capitalize;
+}
+
+#membership .pricing .monthly-price3 {
+    background: url(../images/plan3.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+}
+
+#membership .pricing .monthly-price3::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--over8);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+#membership .pricing .monthly-price3 {
+    padding-top: 41px;
+    padding-bottom: 39px;
+}
+
+#membership .pricing .monthly-price3 h4 span {
+    font-family: var(--hf);
+    font-weight: 500;
+    color: #fff;
+    font-size: 50px;
+}
+
+#membership .pricing .monthly-price3 h4 {
+    font-family: var(--hf);
+    font-weight: 500;
+    color: #ffff;
+    font-size: 29px;
+    text-transform: capitalize;
+}
+
+#membership .pricing .member-features ul {
+    background: var(--bg1);
+    padding-top: 41px;
+    padding-bottom: 26px;
+    padding-left: 0 !important;
+    margin: 0px;
+}
+
+#membership .pricing .member-features ul li {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--clu);
+    padding-bottom: 11px;
+}
+
+#membership .pricing .price-footer a {
+    font-family: var(--hf);
+    font-weight: 400;
+    color: var(--cl2);
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 34px;
+    background: var(--bg2);
+    display: block;
+    transition: all linear 0.4s;
+}
+
+#membership .pricing:hover .price-footer a {
+    background: var(--cl1);
+    color: #fff;
+}
+
+
+/* =======================
+   membership  ends here
+=========================*/
+
+
+/* =======================
+   modal starts here
+=========================*/
+
+.modal {
+    z-index: 9999999;
+}
+
+.modal .modal-header .modal-title {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--hf);
+}
+
+.modal .modal-body label {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-family: var(--hf);
+    font-weight: 400;
+}
+
+.modal .modal-body input {
+    width: 100%;
+}
+
+.modal .modal-body input[type=text],
+.modal .modal-body input[type=email] {
+    padding: 5px;
+    border-color: 1px solid #969090;
+    outline: none;
+}
+
+.modal .modal-body input[type=text]:focus,
+.modal .modal-body input[type=email]:focus {
+    background: #c4bdbd;
+    border-color: 1px solid #ffff;
+    outline: none;
+}
+
+.modal .modal-body input.sub-btn {
+    margin-top: 10px;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: none;
+    background: #cabfbf;
+    font-size: 14px;
+    font-family: var(--hf);
+    font-weight: 400;
+}
+
+.modal .modal-body button {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+/* =======================
+   modal  ends here
+=========================*/
+
+
+/* =======================
+   funfact starts here
+=========================*/
+
+#funfact {
+    background: url(../images/fun-bg.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+    padding-top: 40px;
+    padding-bottom: 45px;
+}
+
+#funfact::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#funfact .fun-item h4 {
+    font-family: var(--hf);
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+#funfact .fun-item p {
+    font-family: var(--pf);
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+
+/* =======================
+   funfact  ends here
+=========================*/
+
+
+/* =======================
+  routine starts here
+=========================*/
+
+#routine {
+    padding-top: 75px;
+    padding-bottom: 70px;
+}
+
+#routine .routine-head {
+    padding-top: 20px;
+}
+
+#routine .routine-head .nav-tabs {
+    border-bottom: none !important;
+}
+
+#routine .routine-head .nav-tabs .nav-item .nav-link {
+    width: 216px;
+    font-family: var(--hf);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--cl2);
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    padding: 0;
+    background: var(--bg1);
+    line-height: 51px;
+}
+
+#routine .routine-head .nav-tabs .nav-item .nav-link.active {
+    background: var(--cl1);
+    color: #fff;
+}
+
+#routine .tab-content ul {
+    padding: 0;
+}
+
+#routine .tab-content ul li {
+    background: var(--bg1);
+    text-align: center;
+    padding: 55px 55px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+    transition: all linear 0.4s;
+}
+
+#routine .tab-content ul li p {
+    font-family: var(--pf);
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--cl2);
+    text-transform: capitalize;
+    margin: 0 !important;
+}
+
+#routine .tab-content ul li p:last-of-type {
+    font-size: 14px;
+    text-transform: lowercase;
+    margin-top: -10px;
+}
+
+#routine .tab-content ul li:nth-child(5n) {
+    margin-right: 0px !important;
+}
+
+#routine .tab-content ul li i {
+    font-size: 32px;
+}
+
+#routine .tab-content ul li.active {
+    background: var(--cl1);
+    color: #fff;
+}
+
+#routine .tab-content ul li.active p {
+    color: #fff;
+}
+
+#routine .tab-content ul li:hover {
+    transform: scale(1.03);
+}
+
+
+/* =======================
+   routine  ends here
+=========================*/
+
+
+/* =======================
+   brand  starts here
+=========================*/
+
+#brand {
+    padding-bottom: 80px;
+}
+
+#brand .brand-item img {
+    width: 100%;
+}
+
+#brand .brand-item {
+    margin-right: 10px;
+}
+
+#brand .prevBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+    cursor: pointer;
+}
+
+#brand .nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -25px;
+    cursor: pointer;
+}
+
+#brand .slick-center.brand-item {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =======================
+   brand  ends here
+=========================*/
+
+
+/* =======================
+   footer starts here
+=========================*/
+
+#footer {
+    background: url(../images/footer-bg.jpg) no-repeat center / cover;
+    position: relative;
+}
+
+#footer::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--cl1);
+    position: absolute;
+    top: 119px;
+    left: 0;
+}
+
+#footer::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--cl1);
+    position: absolute;
+    bottom: 54px;
+    left: 0;
+}
+
+#footer .footer-overlay {
+    width: 100%;
+    height: 100%;
+    background: var(--over8);
+    padding-top: 30px;
+}
+
+#footer .footer-overlay .footer-logo {
+    padding-bottom: 17px;
+}
+
+#footer .footer-overlay .footer-item {
+    padding-bottom: 30px;
+}
+
+#footer .footer-overlay .footer-item h4 {
+    font-family: var(--hf);
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#footer .footer-overlay .footer-item ul li {
+    font-family: var(--pf);
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#footer .footer-overlay .footer-item ul li .day {
+    text-transform: capitalize;
+    width: 70px;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+#footer .footer-overlay .footer-item .weeks li {
+    margin-bottom: 7px;
+}
+
+#footer .footer-overlay .footer-item .weeks li:last-child {
+    margin-bottom: 0px;
+}
+
+#footer .footer-overlay .footer-item .twit li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 25px;
+    text-transform: none;
+}
+
+#footer .footer-overlay .footer-item .twit li:last-child {
+    margin-bottom: 0px;
+}
+
+#footer .footer-overlay .footer-item .twit li .footer-icon {
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+#footer .footer-overlay .footer-item .twit .footer-icon i {
+    color: #1da1f2;
+    font-size: 20px;
+}
+
+#footer .footer-overlay .footer-item .twit a {
+    color: #fff;
+}
+
+#footer .footer-overlay .footer-item .twit li .date {
+    display: block;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+#footer .footer-overlay .footer-item .flickr li {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .footer-overlay .footer-item .flickr li:nth-child(4n) {
+    margin-right: 0px;
+}
+
+#footer .footer-overlay .footer-item .contact li {
+    text-transform: none;
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 20px;
+}
+
+#footer .footer-overlay .footer-item .contact li:last-child {
+    margin-bottom: 0px;
+}
+
+#footer .footer-overlay .footer-item .contact i {
+    color: var(--cl1);
+}
+
+#footer .footer-overlay .footer-item .contact .footer-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#footer .footer-overlay .footer-item h4:last-of-type {
+    margin-top: -5px;
+}
+
+#footer .footer-overlay .footer-item .contact .footer-social i {
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    margin-right: 5px;
+    transition: all linear 0.4s;
+}
+
+#footer .footer-overlay .footer-item .contact .footer-social i:hover {
+    background: var(--cl1);
+    border-color: var(--cl1);
+    color: #fff;
+}
+
+#footer .footer-overlay .footer-copy p {
+    font-family: var(--pf);
+    font-size: 13px;
+    font-weight: 400;
+    color: #f1f1f1;
+    line-height: 54px;
+    margin-bottom: 0;
+}
+
+#footer .footer-overlay .footer-copy p a {
+    color: var(--cl1);
+}
+
+
+/* =======================
+   footer  ends here
+=========================*/
+
+
+/* =======================
+   color picker starts here
+=========================*/
+
+.color-picker {
+    background: #d1d1d1;
+    width: 50px;
+    height: 200px;
+    position: fixed;
+    top: 200px;
+    right: -50px;
+    z-index: 99999;
+    transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+}
+
+.color-picker-pos {
+    right: 0;
+}
+
+.color-picker-rotate {
+    transform: rotate(360deg);
+}
+
+.color-picker .color-icon {
+    width: 30px;
+    height: 30px;
+    background: #6ad894;
+    cursor: pointer;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.color-picker .color-icon i {
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.color-picker ul li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.color-picker ul {
+    width: 50px;
+    height: 200PX;
+    padding-left: 12px;
+    margin-top: 10px;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+}
+
+.color-picker ul li.default {
+    background: #e23e38;
+}
+
+.color-picker ul li.green {
+    background: #008000;
+}
+
+.color-picker ul li.blue {
+    background: #0000ff;
+}
+
+.color-picker ul li.orange {
+    background: #ffa500;
+}
+
+.color-picker ul li.purple {
+    background: #800080;
+}
+
+
+/* green color css  */
+
+.green .navbar-light .navbar-nav .nav-link::after,
+.green #banner .bg1 .banner-text::before,
+.green #banner .bg1 .banner-text::after,
+.green #banner .bg1 .banner-text h2::before,
+.green #banner .bg1 .banner-text h2::after,
+.green #banner .bg1 .banner-text h1::before,
+.green #banner .bg1 .banner-text h1::after,
+.green #about .about-vedio .about-overlay .about-icon i,
+.green #membership .pricing:hover .price-head h3,
+.green #membership .pricing:hover .price-footer a,
+.green .item-overlay,
+.green #routine .routine-head .nav-tabs .nav-item .nav-link.active,
+.green #routine .tab-content ul li.active,
+.green #footer::before,
+.green #banner .slick-dots li.slick-active,
+.green #feedback .slick-dots li.slick-active,
+.green #banner .slider-item .banner-text a:hover,
+.green #footer::after {
+    background: #008000;
+}
+
+.green .item-overlay {
+    background: rgba(0, 128, 0, 0.5);
+}
+
+.green #feedback .slick-dots li.slick-active,
+.green #banner .slick-dots li.slick-active,
+.green #banner .slider-item .banner-text a:hover {
+    border-color: #008000;
+}
+
+.green #banner .slider-item .banner-text h1,
+.green #footer .footer-overlay .footer-item .contact i,
+.green #footer .footer-overlay .footer-copy p a,
+.green #feedback .feedback-item .feedback-title ul li {
+    color: #008000;
+}
+
+
+/* green color css  */
+
+
+/* blue color css  */
+
+.blue .navbar-light .navbar-nav .nav-link::after,
+.blue #banner .bg1 .banner-text::before,
+.blue #banner .bg1 .banner-text::after,
+.blue #banner .bg1 .banner-text h2::before,
+.blue #banner .bg1 .banner-text h2::after,
+.blue #banner .bg1 .banner-text h1::before,
+.blue #banner .bg1 .banner-text h1::after,
+.blue #about .about-vedio .about-overlay .about-icon i,
+.blue #membership .pricing:hover .price-head h3,
+.blue #membership .pricing:hover .price-footer a,
+.blue .item-overlay,
+.blue #routine .routine-head .nav-tabs .nav-item .nav-link.active,
+.blue #routine .tab-content ul li.active,
+.blue #footer::before,
+.blue #footer::after,
+.blue #feedback .slick-dots li.slick-active,
+.blue #banner .slick-dots li.slick-active {
+    background: #0000ff;
+    ;
+}
+
+.blue .item-overlay {
+    background: rgba(0, 0, 255, 0.5);
+}
+
+.blue #feedback .slick-dots li.slick-active,
+.blue #banner .slick-dots li.slick-active {
+    border-color: #0000ff;
+    ;
+}
+
+.blue #banner .slider-item .banner-text h1,
+.blue #feedback .feedback-item .feedback-title ul li,
+.blue #footer .footer-overlay .footer-item .contact i,
+.blue #footer .footer-overlay .footer-copy p a {
+    color: #0000ff;
+    ;
+}
+
+
+/* blue color css  */
+
+
+/* orange color css  */
+
+.orange .navbar-light .navbar-nav .nav-link::after,
+.orange #banner .bg1 .banner-text::before,
+.orange #banner .bg1 .banner-text::after,
+.orange #banner .bg1 .banner-text h2::before,
+.orange #banner .bg1 .banner-text h2::after,
+.orange #banner .bg1 .banner-text h1::before,
+.orange #banner .bg1 .banner-text h1::after,
+.orange #about .about-vedio .about-overlay .about-icon i,
+.orange #membership .pricing:hover .price-head h3,
+.orange #membership .pricing:hover .price-footer a,
+.orange .item-overlay,
+.orange #routine .routine-head .nav-tabs .nav-item .nav-link.active,
+.orange #routine .tab-content ul li.active,
+.orange #footer::before,
+.orange #footer::after,
+.orange #feedback .slick-dots li.slick-active,
+.orange #banner .slick-dots li.slick-active {
+    background: #ffa500;
+}
+
+.orange .item-overlay {
+    background: rgba(255, 251, 0, 0.5);
+}
+
+.orange #feedback .slick-dots li.slick-active,
+.orange #banner .slick-dots li.slick-active {
+    border-color: #ffa500;
+}
+
+.orange #banner .slider-item .banner-text h1,
+.orange #feedback .feedback-item .feedback-title ul li,
+.orange #footer .footer-overlay .footer-item .contact i,
+.orange #footer .footer-overlay .footer-copy p a {
+    color: #ffa500;
+}
+
+
+/* orange color css  */
+
+
+/* purple color css  */
+
+.purple .navbar-light .navbar-nav .nav-link::after,
+.purple #banner .bg1 .banner-text::before,
+.purple #banner .bg1 .banner-text::after,
+.purple #banner .bg1 .banner-text h2::before,
+.purple #banner .bg1 .banner-text h2::after,
+.purple #banner .bg1 .banner-text h1::before,
+.purple #banner .bg1 .banner-text h1::after,
+.purple #about .about-vedio .about-overlay .about-icon i,
+.purple #membership .pricing:hover .price-footer a,
+.purple .item-overlay,
+.purple #routine .routine-head .nav-tabs .nav-item .nav-link.active,
+.purple #routine .tab-content ul li.active,
+.purple #footer::before,
+.purple #footer::after,
+.purple #feedback .slick-dots li.slick-active,
+.purple #banner .slick-dots li.slick-active {
+    background: #800080;
+}
+
+.purple .item-overlay {
+    background: rgba(128, 0, 128, 0.5);
+}
+
+.purple #feedback .slick-dots li.slick-active,
+.purple #banner .slick-dots li.slick-active {
+    border-color: #800080;
+}
+
+.purple #banner .slider-item .banner-text h1,
+.purple #feedback .feedback-item .feedback-title ul li,
+.purple #footer .footer-overlay .footer-item .contact i,
+.purple #footer .footer-overlay .footer-copy p a {
+    color: #800080;
+}
+
+
+/* purple color css  */
+
+
+/* =======================
+   color picker starts here
+=========================*/
+
+
+/* =======================
+  dark mode starts here
+=========================*/
+
+.position {
+    background: black;
+    color: #fff;
+}
+
+.dark-mode .change-mode {
+    position: fixed;
+    top: 200px;
+    left: 0;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-family: var(--hf);
+    font-weight: 500;
+    padding: 10px;
+    z-index: 2222;
+}
+
+
+/* =======================
+   dark mode starts here
+=========================*/

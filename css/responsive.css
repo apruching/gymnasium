@@ -1,0 +1,304 @@
+    /*extra extra large device starts*/
+    
+    @media(max-width:1400px) {
+        .navbar .navbar-nav {
+            background: transparent;
+        }
+        .navbar .navbar-nav .nav-link {
+            text-align: center;
+            color: #ffff;
+        }
+        #routine .tab-content ul li {
+            padding: 55px 55px;
+        }
+        #routine .routine-head .nav-tabs .nav-item .nav-link {
+            width: 422px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+    }
+    /*extra extra large device starts*/
+    
+    @media(min-width:1200px) and (max-width:1399.98px) {
+        .navbar .navbar-nav {
+            background: transparent;
+        }
+        .navbar .navbar-nav .nav-link {
+            text-align: center;
+            color: #ffff;
+        }
+        #routine .tab-content ul li {
+            padding: 37px 37px;
+        }
+        #routine .routine-head .nav-tabs .nav-item .nav-link {
+            width: 362px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        #banner .bg1 .banner-text h2::before {
+            width: 152px;
+        }
+        #banner .bg1 .banner-text h2::after {
+            width: 104px;
+        }
+        #banner .bg1 .banner-text h1::before {
+            width: 67px;
+        }
+        #banner .bg1 .banner-text h1::after {
+            width: 40px;
+        }
+    }
+    /*extra large device ends*/
+    /*large device starts*/
+    
+    @media (min-width:992px) and (max-width:1199.98px) {
+        .navbar .navbar-nav {
+            background: transparent;
+        }
+        .navbar .navbar-nav .nav-link {
+            text-align: center;
+            color: #353535;
+        }
+        #routine .tab-content ul {
+            background: red;
+        }
+        #routine .tab-content ul li {
+            padding: 19px 19px;
+        }
+        #routine .routine-head .nav-tabs .nav-item .nav-link {
+            width: 302px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        #banner .bg1 .banner-text h2::before {
+            width: 120px;
+        }
+        #banner .bg1 .banner-text h2::after {
+            width: 113px;
+            right: -35px;
+        }
+        #banner .bg1 .banner-text h1::before {
+            width: 20px;
+        }
+        #banner .bg1 .banner-text h1::after {
+            width: 23px;
+            right: -35px;
+        }
+        #banner .bg1 .banner-text::after {
+            right: -35px;
+        }
+    }
+    /*large device ends*/
+    /*medium device starts*/
+    
+    @media(min-width:768px) and (max-width:991.98px) {
+        .navbar .navbar-brand {
+            position: static;
+            padding: 0px 16px !important;
+            transform: skewX(0) !important;
+        }
+        .navbar .navbar-brand img {
+            transform: skewX(0);
+        }
+        .navbar .navbar-toggler {
+            border-color: #fff !important;
+        }
+        .navbar .navbar-toggler span {
+            color: #fff;
+        }
+        .navbar .navbar-nav {
+            background: #fff;
+        }
+        .navbar .navbar-nav .nav-link {
+            text-align: center;
+            color: #353535;
+        }
+        #routine .tab-content ul li {
+            padding: 40px 98px;
+        }
+        #routine .tab-content ul li:nth-child(5n) {
+            margin-right: 5px !important;
+        }
+        #routine .routine-head .nav-tabs .nav-item .nav-link {
+            width: 222px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        #banner .bg1 .banner-text h2::before {
+            width: 231px;
+        }
+        #banner .bg1 .banner-text h2::after {
+            width: 182px;
+        }
+        #banner .bg1 .banner-text h1::before {
+            width: 142px;
+        }
+        #banner .bg1 .banner-text h1::after {
+            width: 115px;
+        }
+    }
+    /*medium device ends*/
+    /*small device starts*/
+    
+    @media(min-width:576px) and (max-width:767.98px) {
+        .navbar .navbar-brand {
+            position: static;
+            padding: 0px 16px !important;
+            transform: skewX(0) !important;
+        }
+        .navbar .navbar-brand img {
+            transform: skewX(0);
+        }
+        .navbar .navbar-toggler {
+            border-color: #fff !important;
+        }
+        .navbar .navbar-toggler span {
+            color: #fff;
+        }
+        .navbar .navbar-nav {
+            background: #fff;
+        }
+        .navbar .navbar-nav .nav-link {
+            text-align: center;
+            color: #353535;
+        }
+        #banner .bg1 .banner-text h2::before {
+            width: 152px;
+        }
+        #banner .bg1 .banner-text h2::after {
+            width: 104px;
+        }
+        #banner .bg1 .banner-text h1::before {
+            width: 48px;
+        }
+        #banner .bg1 .banner-text h1::after {
+            width: 18px;
+        }
+        #about {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        #team {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        #membership {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        #membership .pricing {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        #routine {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        #routine .routine-head .nav-tabs .nav-item .nav-link {
+            width: 248px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        #routine .tab-content ul li {
+            padding: 50px 53px;
+        }
+        #routine .tab-content ul li:nth-child(5n) {
+            margin-right: 5px !important;
+        }
+        #footer .footer-overlay .footer-item .flickr li:nth-child(4n) {
+            margin-right: 10px;
+        }
+    }
+    /*small device ends*/
+    /*extra small device starts*/
+    
+    @media (max-width:575.98px) {
+        .navbar .navbar-brand {
+            position: static;
+            padding: 0px 16px !important;
+            transform: skewX(0) !important;
+        }
+        .navbar .navbar-brand img {
+            transform: skewX(0);
+        }
+        .navbar .navbar-toggler {
+            border-color: #fff !important;
+        }
+        .navbar .navbar-toggler span {
+            color: #fff;
+        }
+        .navbar .navbar-nav {
+            background: #fff;
+        }
+        .navbar .navbar-nav .nav-link {
+            text-align: center;
+            color: #353535;
+        }
+        .slider-item {
+            padding-top: 180px;
+            padding-bottom: 80px;
+        }
+        #banner .bg1 .banner-text h2::before {
+            display: none !important;
+        }
+        #banner .bg1 .banner-text h2::after {
+            display: none;
+        }
+        #banner .bg1 .banner-text::before {
+            display: none;
+        }
+        #banner .bg1 .banner-text::after {
+            display: none;
+        }
+        #banner .bg1 .banner-text h1::before {
+            display: none;
+        }
+        #banner .bg1 .banner-text h1::after {
+            display: none;
+        }
+        #banner .slider-item .banner-text h2 {
+            font-size: 20px;
+        }
+        #banner .slider-item .banner-text h1 {
+            font-size: 39px;
+            margin-bottom: 5px;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+        }
+        #about {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        #about .about-vedio {
+            margin-top: 25px;
+        }
+        #team {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        #membership .pricing {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        #routine .routine-head .nav-tabs .nav-item .nav-link {
+            width: 297px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        #routine .tab-content ul li {
+            padding: 63px 108px;
+        }
+        #routine .tab-content ul li:nth-child(5n) {
+            margin-right: 5px !important;
+        }
+        #footer .footer-overlay .footer-item .flickr li:nth-child(4n) {
+            margin-right: 10px;
+        }
+    }
+    /*extra small device starts*/
